@@ -29,7 +29,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [https://www.frontendmentor.io/solutions/article-preview-component-using-vanilla-js-Ah98W1TS-i](https://www.frontendmentor.io/solutions/article-preview-component-using-vanilla-js-Ah98W1TS-i)
 - Live Site URL: [https://edoardozampini.github.io/article-preview-component/](https://edoardozampini.github.io/article-preview-component/)
 
 ## My process
