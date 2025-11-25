@@ -1,0 +1,231 @@
+@font-face {
+    font-family: 'Manrope';
+    src: url('./fonts/Manrope-Medium.ttf') format('trueType');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Manrope';
+    src: url('./fonts/Manrope-SemiBold.ttf') format('trueType');
+    font-weight: 700;
+    font-style: normal;
+}
+
+body {
+    font-family: 'Manrope', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: hsl(210, 46%, 95%);
+}
+
+.section {
+    display: flex;
+    flex-direction: row;
+    width: 60%;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.div1 {
+    width: 45%;
+    background-image: url(./images/drawers.jpg);
+    background-size: cover;
+    background-position: left center;
+    border-radius: 10px 0 0 10px;
+}
+
+.div1 img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.div2 {
+    width: 55%;
+    padding: 4%;
+}
+
+h1 {
+    font-weight: 700;
+    font-size: 1.4em;
+    color: hsl(217, 19%, 35%);
+}
+
+p {
+    font-weight: 500;
+    font-size: 1em;
+    color: hsl(212, 23%, 69%);
+    margin: 0;
+}
+
+#author-info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 8%;
+}
+
+#author-details {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.author-name {
+    font-weight: 700;
+    font-size: 0.9em;
+    color: hsl(217, 19%, 35%);
+    margin: 0;
+}
+
+#icon-container {
+    background-color: hsl(210, 46%, 95%);
+    padding: 2%;
+    border-radius: 50%;
+}
+
+#icon-container.active {
+    cursor: pointer;
+    background-color: hsl(217, 19%, 35%);
+}
+
+#icon-container.active .share-icon {
+    filter: brightness(0) invert(1);
+}
+
+#share-box {
+    position: absolute;
+    bottom: 45%;
+    right: 15%;
+    width: 15%;
+    gap: 10%;
+    justify-content: center;
+    background-color: hsl(217, 19%, 35%);
+    padding: 1%;
+    border-radius: 10px;
+    display: flex;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity .25s ease, visibility .25s ease;
+    z-index: 10;
+    box-shadow: 12px 12px 2px 1px hsla(0, 0%, 0%, 0.1);
+}
+
+#share-box.is-visible {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+#share-box::after {
+  content: "";
+  position: absolute;
+  bottom: -10px; 
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid hsl(217, 19%, 35%);
+}
+
+#share-box-mobile {
+    display: none;
+}
+
+#author-info-mobile {
+    display: none;
+}
+
+@media (max-width: 700px) {
+
+    .section {
+        flex-direction: column;
+        width: 90%;
+        align-items: center;
+    }
+
+    .div1 {
+        width: 100%;
+        aspect-ratio: 16/9;
+        border-radius: 10px 10px 0 0;
+    }
+
+    .div2 {
+        width: auto;
+        padding: 0%;
+    }
+
+    h1 {
+        margin: 0;
+        padding: 10% 5% 5% 5%;
+    }
+
+    .description {
+        padding: 0% 5% 5% 5%;
+    }
+
+    #author-info {
+        display: none;
+    }
+
+    #author-info-mobile {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10%;
+    }
+
+    #share-box-mobile {
+        background-color: hsl(217, 19%, 35%);
+        display: none;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 7% 10% 7% 10%;
+        border-radius: 0 0 10px 10px;
+    }
+
+    #social-icon {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 15%
+    }
+
+    #icon-container-mobile {
+        background-color: hsl(210, 46%, 95%);
+        padding: 2%;
+        border-radius: 50%;
+    }
+
+    #icon-container-share {
+        background-color: hsl(212, 23%, 69%);
+        padding: 2%;
+        border-radius: 50%;
+    }
+
+    .share-text {
+        font-size: 1.2em;
+        letter-spacing: 0.3em;
+    }
+
+    .share-icon {
+        filter: brightness(0) invert(1);
+    }
+}
