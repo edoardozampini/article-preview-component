@@ -1,10 +1,9 @@
 const socialButton = document.getElementById('icon-container');
-const shareBox = document.getElementById('share-box');
-const iconContainer = document.getElementById('icon-container');
+const shareBox = document.getElementById('share-box');1
 
 socialButton.addEventListener('click', function() {
     shareBox.classList.toggle('is-visible');
-    iconContainer.classList.toggle('active');
+    socialButton.classList.toggle('active');
 })
 
 const socialButtonMobile = document.getElementById('icon-container-mobile');
